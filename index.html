@@ -76,6 +76,41 @@
       animation: pulse-dot 2s ease-in-out infinite;
     }
 
+    .logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: pulse-logo 4s ease-in-out infinite;
+      filter: drop-shadow(10 22 1px #12C86B);
+    }
+
+    .logo-wrap img {
+      height: 50px;
+      width: auto;
+      display: block;
+    }
+
+@keyframes pulse-logo {
+  0%,100% {
+    transform: rotate(0deg) scale(1.1);
+  }
+
+  25% {
+    transform: rotate(-4deg) scale(1.2);
+  }
+
+  75% {
+    transform: rotate(4deg) scale(1.2);
+  }
+  0%, 100% {
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    transform: rotateY(180deg);
+  }
+}
+
     @keyframes pulse-dot {
       0%,100% { transform: scale(1); opacity: 1; }
       50% { transform: scale(1.4); opacity: 0.7; }
@@ -800,8 +835,10 @@
   <!-- NAV -->
   <nav>
     <div class="logo">
-      <div class="logo-dot"></div>
-      Tradebloom
+      <div class="logo-wrap">
+        <img src="images/logo.png" alt="Tradebloom Logo">
+      </div>
+       <img src="images/name.png" alt="Tradebloom Logo">
     </div>
     <ul>
       <li><a href="#how">How It Works</a></li>
